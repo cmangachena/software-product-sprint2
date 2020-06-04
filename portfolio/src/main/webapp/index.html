@@ -4,15 +4,146 @@
     <meta charset="UTF-8">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="script.js"></script>
   </head>
   <body>
     <div id="content">
-      <h1>My Portfolio</h1>
-      <p>This is my portfolio.</p>
-      <p>Click here to get a random message:</p>
-      <button onclick="addRandomGreeting()">Hello</button>
-      <div id="greeting-container"></div>
+      <h1></h1>
+      <div class="container-fluid bg-1 text-center">
+        <img src="images/chenai5.JPG" class="img-circle" width = "50%" height = "50%">
+        <ul class="social-icons">
+    
+        <a href="https://www.facebook.com/chenain.mangachena" target='blank'>
+            <img src="/images/social-media-icons/facebook.png" alt="Facebook" />
+        </a>
+
+        <a href="https://twitter.com/CMangachena" target='blank'>
+            <img src="/images/social-media-icons/twitter.png" alt="Twitter" />
+        </a>
+    
+        <a href="https://www.instagram.com/chenai_mangachena/" target='blank'>
+            <img src="/images/social-media-icons/instagram.png" alt="Instagram" />
+        </a>
+    
+        <a href="https://www.linkedin.com/in/chenai-mangachena-ba0758187" target='blank'>
+            <img src="/images/social-media-icons/linkedin.png" alt="Linkedin" />
+        </a>
+    
+        <a href="https://github.com/Chenai-Nessy" target='blank'>
+            <img src="/images/social-media-icons/github.png" alt="Github" />
+        </a>
     </div>
+    </div>
+    <div id="paragraph1">
+      <h2>A bit about my background...</h2>
+        <p>
+            Hello, my name is Chenai Mangachena and I was born and raised in Harare, Zimbabwe. I am the only girl in my family, with two younger brothers and until recently, a precious dog.
+        </p>
+    </div>
+    <div id="paragraph2">
+       <h2>Professional and academic interests...</h2>
+        <p>
+          I went to school in Zimbabwe all through my entire high school education, where I attended Hellenic International Academy and Mufakose 2 High School. 
+         I am currently a sophomore at Harvard College
+         studying Computer Science with a minor in African Studies. I enjoy solving problems and prefer mathematics to writing, though I also 
+         enjoy creative writing and writing poetry. 
+        </p>
+    <div id="paragraph3">
+        <h2>Outside of class...</h2>
+        <p> 
+         I enjoy sightseeing, roadtrips and traveling to foreign countries. 
+         I also love listening to all sorts of music and reading novels. I am also currently teaching myself guitar and
+         piano. Occasionally going to the gym and hanging out with friends is fun too.
+         I also love making paper beads, reading and writing in my diary. I find soccer fascinating and also enjoy video games particularly "Need for Speed."
+        </p>
+    <div id="paragraph4">
+        <h2> Projects I have worked on...</h2>
+    <p> I have worked on a number of small projects but my favourite is the one below where I: </p>
+        
+        <ul>
+            <li>Built a web application to solve the Harvard students’ challenge of being inundated with emails and consequently missing important emails</li>
+             <li>Ensured  application enabled admins to post information sorted into categories and users to view information that is relevant to them</li>
+
+            <li>Implemented the application using Python, Django, PHP lite, HTML and CSS</li>
+        </ul>
+        <iframe width="420" height="315"
+            src="https://www.youtube.com/embed/_PrVuodz1Gk">
+        </iframe>
+    </div>
+    <div id="quote">
+        <p> Click here to see some of my random favourite quotes of mine! </p>
+    <button onclick="addRandomQuote()">Inspire Me!</button>
+      <div id="quote-container"></div>
+      <script>
+        console.log(quote-container);
+    </script>
+    </div>
+    </div>
+    
+    <button onclick="getMessage()">Click if you'd like to see a message!</button>
+    <div id="message-container"></div>
+    <script>
+         console.log(quote-container);
+    </script>
+
+    <h2>My Gallery: A short summary of my life in pictures...</h2>
+    
+    <div class="gallery">
+    <a target="_blank" href="images/chenai4.PNG">
+        <img src="images/chenai4.PNG" alt="Laughter and cameras" width="600" height="400">
+    </a>
+    <div class="desc">I love to laugh and also recently started loving photography</div>
+    </div>
+
+    <div class="gallery">
+    <a target="_blank" href="images/friends.jpg">
+        <img src="images/friends.jpg" alt="Friends" width="600" height="400">
+    </a>
+    <div class="desc">I love my friends, they truly keep me going.</div>
+    </div>
+
+    <div class="gallery">
+    <a target="_blank" href="images/chenai2.JPG">
+        <img src="images/chenai2.JPG" alt="My favourite person" width="600" height="400">
+    </a>
+    <div class="desc">My mum is my favorite person in the world!</div>
+    </div>
+
+    <div class="gallery">
+    <a target="_blank" href="images/food.JPG">
+        <img src="images/food.JPG" alt="food" width="600" height="400">
+    </a>
+    <div class="desc">The way I love food!</div>
+    </div>
+    <div class="gallery">
+    <a target="_blank" href="images/beads.JPG">
+        <img src="images/beads.JPG" alt="Beads" width="600" height="400">
+    </a>
+    <div class="desc">Made these from real paper and taught some Taiwanese students to make some too</div>
+    </div>
+
+    <div class="gallery">
+    <a target="_blank" href="images/travel.jpg">
+        <img src="images/travel.jpg" alt="Travel" width="600" height="400">
+    </a>
+    <div class="desc">Travelling is one of the things I love most about life</div>
+    </div>
+    
+    <div class="gallery">
+    <a target="_blank" href="images/bible.jpeg">
+        <img src="images/bible.jpeg" alt="Travel" width="600" height="400">
+    </a>
+    <div class="desc">Strong Christian faith</div>
+    </div>
+    <div class="gallery">
+    <a target="_blank" href="images/chelse.jpg">
+        <img src="images/chelse.jpg" alt="Travel" width="600" height="400">
+    </a>
+    <div class="desc">My favourite soccer team</div>
+    </div>
+</div>
   </body>
 </html>
+
