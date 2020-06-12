@@ -27,3 +27,11 @@ function addRandomQuote() {
     quotesContainer.innerText = quote;
 
 }
+async function addMessage(){
+    //const message = "This is great!";
+
+   const response = await fetch('/data');
+   const message = await response.text();
+   document.getElementById('message-container').innerHTML = message;
+
+}
