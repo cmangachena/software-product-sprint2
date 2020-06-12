@@ -28,10 +28,18 @@ function addRandomQuote() {
 
 }
 async function addMessage(){
-    //const message = "This is great!";
 
-   const response = await fetch('/data');
-   const message = await response.text();
-   document.getElementById('message-container').innerHTML = message;
+   // Sends a request to /my-data-url 
+   fetch('/data')
+   // Parses the response as JSON  
+.then(response => response.json()) 
+  // References the fields in the object 
+.then((messages) => { 
+  console.log(messages[0]);
+  console.log(messages[1]);
+  console.log(messages[2]);
 
+  const messageContainer = document.getElementById('message-container');
+  messageContainer.innerText = messages;
+});
 }
