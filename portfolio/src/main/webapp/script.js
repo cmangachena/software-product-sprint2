@@ -27,3 +27,19 @@ function addRandomQuote() {
     quotesContainer.innerText = quote;
 
 }
+async function addMessage(){
+
+   // Sends a request to /my-data-url 
+   fetch('/data')
+   // Parses the response as JSON  
+.then(response => response.json()) 
+  // References the fields in the object 
+.then((messages) => { 
+  console.log(messages[0]);
+  console.log(messages[1]);
+  console.log(messages[2]);
+
+  const messageContainer = document.getElementById('message-container');
+  messageContainer.innerText = messages;
+});
+}
