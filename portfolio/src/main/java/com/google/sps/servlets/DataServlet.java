@@ -21,6 +21,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import com.google.gson.Gson; 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 /** Servlet that returns some example content. TODO: modify this file to handle comments data */
 @WebServlet("/data")
@@ -29,21 +30,35 @@ public class DataServlet extends HttpServlet {
   @Override
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
     
-    // Adds an array of messages
-    ArrayList<String> messages = new ArrayList<String>();
-
-    messages.add("Harare");
-    messages.add("Bulawayo is the second largest city");
-    messages.add("Mutare is also a significant place in Zimbabwe");
-
     // Converts message to json
     Gson gson = new Gson();
-    String json = gson.toJson(messages);
+    String json = gson.toJson(comments);
    
     // Sets the value of what to return as response
     response.setContentType("application/json;");
     response.getWriter().println(json);
 
+  }
+  
+   // Data structure to store names and comments
+      ArrayList<String> comments = new ArrayList();
+
+  @Override
+  public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException{
+
+      // Gets fullname from form
+      String fullName = request.getParameter("full-name");
+
+      // Gets comment from form
+      String comment = request.getParameter("comment");
+
+      // Populates ArrayList with names and comments
+      comments.add(fullName);
+      comments.add(comment);
+
+      // Redirects to main page
+      response.sendRedirect("/index.html");
+  
   }
 }
 
