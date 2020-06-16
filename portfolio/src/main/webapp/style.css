@@ -73,3 +73,16 @@ div.desc {
   padding: 15px;
   text-align: center;
 }
+#comments {
+    text-align: left;
+    padding: 30px;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 20px; 
+    word-spacing: 2px;
+}
+
+#map {
+  height: 300px;
+  width: 300px;
+
+}

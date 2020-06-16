@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -7,6 +9,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="script.js"></script>
+      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDEqLA84LuF5WXCqQnY9OQKZnI10OJpOps&callback=initMap"
+  type="text/javascript"></script>
   </head>
   <body>
     <div id="content">
@@ -81,71 +85,89 @@
     </div>
     </div>
 
-    <div id="message">
-        <p> Click here to see a message </p>
-        <button onclick="addMessage()">Surprise Me!</button>
-        <div id="message-container"></div>
-        <script>
-            console.log( message-container);
-        </script>
-    </div>
-    </div>
     
     <h2>My Gallery: A short summary of my life in pictures...</h2>
     
     <div class="gallery">
-    <a target="_blank" href="images/chenai4.PNG">
+        <a target="_blank" href="images/chenai4.PNG">
         <img src="images/chenai4.PNG" alt="Laughter and cameras" width="600" height="400">
-    </a>
-    <div class="desc">I love to laugh and also recently started loving photography</div>
+        </a>
+        <div class="desc">I love to laugh and also recently started loving photography</div>
     </div>
 
     <div class="gallery">
-    <a target="_blank" href="images/friends.jpg">
-        <img src="images/friends.jpg" alt="Friends" width="600" height="400">
-    </a>
-    <div class="desc">I love my friends, they truly keep me going.</div>
+        <a target="_blank" href="images/friends.jpg">
+            <img src="images/friends.jpg" alt="Friends" width="600" height="400">
+        </a>
+        <div class="desc">I love my friends, they truly keep me going.</div>
     </div>
 
     <div class="gallery">
-    <a target="_blank" href="images/chenai2.JPG">
-        <img src="images/chenai2.JPG" alt="My favourite person" width="600" height="400">
-    </a>
-    <div class="desc">My mum is my favorite person in the world!</div>
+        <a target="_blank" href="images/chenai2.JPG">
+            <img src="images/chenai2.JPG" alt="My favourite person" width="600" height="400">
+        </a>
+        <div class="desc">My mum is my favorite person in the world!</div>
     </div>
 
     <div class="gallery">
-    <a target="_blank" href="images/food.JPG">
-        <img src="images/food.JPG" alt="food" width="600" height="400">
-    </a>
-    <div class="desc">The way I love food!</div>
+        <a target="_blank" href="images/food.JPG">
+            <img src="images/food.JPG" alt="food" width="600" height="400">
+        </a>
+        <div class="desc">The way I love food!</div>
     </div>
     <div class="gallery">
-    <a target="_blank" href="images/beads.JPG">
-        <img src="images/beads.JPG" alt="Beads" width="600" height="400">
-    </a>
-    <div class="desc">Made these from real paper and taught some Taiwanese students to make some too</div>
+        <a target="_blank" href="images/beads.JPG">
+            <img src="images/beads.JPG" alt="Beads" width="600" height="400">
+        </a>
+        <div class="desc">Made these from real paper and taught some Taiwanese students to make some too</div>
     </div>
 
     <div class="gallery">
-    <a target="_blank" href="images/travel.jpg">
-        <img src="images/travel.jpg" alt="Travel" width="600" height="400">
-    </a>
-    <div class="desc">Travelling is one of the things I love most about life</div>
+        <a target="_blank" href="images/travel.jpg">
+            <img src="images/travel.jpg" alt="Travel" width="600" height="400">
+        </a>
+        <div class="desc">Travelling is one of the things I love most about life</div>
     </div>
     
     <div class="gallery">
-    <a target="_blank" href="images/bible.jpeg">
-        <img src="images/bible.jpeg" alt="Travel" width="600" height="400">
-    </a>
-    <div class="desc">Strong Christian faith</div>
+        <a target="_blank" href="images/bible.jpeg">
+            <img src="images/bible.jpeg" alt="Travel" width="600" height="400">
+        </a>
+        <div class="desc">Strong Christian faith</div>
     </div>
     <div class="gallery">
-    <a target="_blank" href="images/chelse.jpg">
-        <img src="images/chelse.jpg" alt="Travel" width="600" height="400">
-    </a>
-    <div class="desc">My favourite soccer team</div>
+        <a target="_blank" href="images/chelse.jpg">
+            <img src="images/chelse.jpg" alt="Travel" width="600" height="400">
+        </a>
+        <div class="desc">My favourite soccer team</div>
     </div>
+</div>
+
+<div>
+<p>Got some thoughts about this? Leave a comment below</p>
+
+<form action="/data"  method="post">
+  <label for="full-name">Full Name:</label><br>
+  <input type="text" id="full-name" name="full-name" ><br>
+  <label for="comment">Comment:</label><br>
+  <input type="text" id="comment" name="comment"><br><br>
+  <input type="submit" value="Submit">
+</form>
+
+<div>
+    <p> Here are some comments! </p>
+        <div id="comments"></div>
+        <script>
+            console.log(comments);
+        </script>
+</div>
+    
+</div>
+<p> Here's a map <p>
+<div id="map">
+        <script>
+            console.log("Map is supposed to print here");
+        </script> 
 </div>
   </body>
 </html>
