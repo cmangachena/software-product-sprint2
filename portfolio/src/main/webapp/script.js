@@ -11,10 +11,20 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-
+  
+// Allows comments to be displayed everytime the page loads
 window.onload = function() {
   addComments();
 };
+
+// Adds map to page
+var map;
+function initMap() {
+  map = new google.maps.Map(document.getElementById("map"), {
+    center: { lat: -19.0154, lng: 29.1549},
+    zoom: 0
+  });
+}
 /**
  * Adds a random quote to the page.
  */

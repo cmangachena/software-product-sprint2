@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="script.js"></script>
+      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDEqLA84LuF5WXCqQnY9OQKZnI10OJpOps&callback=initMap"
+  type="text/javascript"></script>
   </head>
   <body>
     <div id="content">
@@ -156,10 +158,16 @@
     <p> Here are some comments! </p>
         <div id="comments"></div>
         <script>
-            console.log( comments-container);
+            console.log(comments);
         </script>
 </div>
     
+</div>
+<p> Here's a map <p>
+<div id="map">
+        <script>
+            console.log("Map is supposed to print here");
+        </script> 
 </div>
   </body>
 </html>
