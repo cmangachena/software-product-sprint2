@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -81,15 +83,6 @@
     </div>
     </div>
 
-    <div id="message">
-        <p> Click here to see a message </p>
-        <button onclick="addMessage()">Surprise Me!</button>
-        <div id="message-container"></div>
-        <script>
-            console.log( message-container);
-        </script>
-    </div>
-    </div>
     
     <h2>My Gallery: A short summary of my life in pictures...</h2>
     
@@ -146,6 +139,27 @@
     </a>
     <div class="desc">My favourite soccer team</div>
     </div>
+</div>
+
+<div>
+<p>Got some thoughts about this? Leave a comment below</p>
+
+<form action="/data"  method="post">
+  <label for="full-name">Full Name:</label><br>
+  <input type="text" id="full-name" name="full-name" ><br>
+  <label for="comment">Comment:</label><br>
+  <input type="text" id="comment" name="comment"><br><br>
+  <input type="submit" value="Submit">
+</form>
+
+<div>
+    <p> Here are your comments! </p>
+        <div id="comments"></div>
+        <script>
+            console.log( comments-container);
+        </script>
+</div>
+    
 </div>
   </body>
 </html>
