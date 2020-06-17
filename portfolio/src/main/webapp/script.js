@@ -24,6 +24,27 @@ function initMap() {
     center: { lat: -19.0154, lng: 29.1549},
     zoom: 0
   });
+
+// Adds motihari  marker to page
+var motihari = {lat: 26.6438, lng: 84.9040};
+var marker = new google.maps.Marker({
+  position: motihari,
+  map: map
+});
+
+// Adds ithaca marker to page
+var ithaca = {lat: 42.4440, lng: -76.5019};
+var marker = new google.maps.Marker({
+    position: ithaca,
+    map: map
+});
+
+// Adds monroeville marker to page
+var monroeville = {lat: 31.5279, lng: 87.3247};
+var marker = new google.maps.Marker({
+    position: monroeville,
+    map: map
+})
 }
 /**
  * Adds a random quote to the page.
