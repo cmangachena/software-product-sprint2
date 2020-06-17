@@ -11,7 +11,41 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+  
+// Allows comments to be displayed everytime the page loads
+window.onload = function() {
+  addComments();
+};
 
+// Adds map to page
+var map;
+function initMap() {
+  map = new google.maps.Map(document.getElementById("map"), {
+    center: { lat: -19.0154, lng: 29.1549},
+    zoom: 0
+  });
+
+// Adds motihari  marker to page
+var motihari = {lat: 26.6438, lng: 84.9040};
+var marker = new google.maps.Marker({
+  position: motihari,
+  map: map
+});
+
+// Adds ithaca marker to page
+var ithaca = {lat: 42.4440, lng: -76.5019};
+var marker = new google.maps.Marker({
+    position: ithaca,
+    map: map
+});
+
+// Adds monroeville marker to page
+var monroeville = {lat: 31.5279, lng: 87.3247};
+var marker = new google.maps.Marker({
+    position: monroeville,
+    map: map
+})
+}
 /**
  * Adds a random quote to the page.
  */
@@ -27,19 +61,18 @@ function addRandomQuote() {
     quotesContainer.innerText = quote;
 
 }
-async function addMessage(){
+async function addComments(){
 
    // Sends a request to /my-data-url 
    fetch('/data')
    // Parses the response as JSON  
 .then(response => response.json()) 
   // References the fields in the object 
-.then((messages) => { 
-  console.log(messages[0]);
-  console.log(messages[1]);
-  console.log(messages[2]);
+.then((comments) => { 
+  console.log(comments);
 
-  const messageContainer = document.getElementById('message-container');
-  messageContainer.innerText = messages;
+  const commentsContainer = document.getElementById('comments');
+  
+  commentsContainer.innerHTML = comments.join("<br>");
 });
 }
